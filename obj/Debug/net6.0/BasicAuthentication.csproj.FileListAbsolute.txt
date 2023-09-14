@@ -1,0 +1,14 @@
+C:\Users\DELL\source\repos\MCC81NET\BasicAuthentication\bin\Debug\net6.0\BasicAuthentication.exe
+C:\Users\DELL\source\repos\MCC81NET\BasicAuthentication\bin\Debug\net6.0\BasicAuthentication.deps.json
+C:\Users\DELL\source\repos\MCC81NET\BasicAuthentication\bin\Debug\net6.0\BasicAuthentication.runtimeconfig.json
+C:\Users\DELL\source\repos\MCC81NET\BasicAuthentication\bin\Debug\net6.0\BasicAuthentication.dll
+C:\Users\DELL\source\repos\MCC81NET\BasicAuthentication\bin\Debug\net6.0\BasicAuthentication.pdb
+C:\Users\DELL\source\repos\MCC81NET\BasicAuthentication\obj\Debug\net6.0\BasicAuthentication.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DELL\source\repos\MCC81NET\BasicAuthentication\obj\Debug\net6.0\BasicAuthentication.AssemblyInfoInputs.cache
+C:\Users\DELL\source\repos\MCC81NET\BasicAuthentication\obj\Debug\net6.0\BasicAuthentication.AssemblyInfo.cs
+C:\Users\DELL\source\repos\MCC81NET\BasicAuthentication\obj\Debug\net6.0\BasicAuthentication.csproj.CoreCompileInputs.cache
+C:\Users\DELL\source\repos\MCC81NET\BasicAuthentication\obj\Debug\net6.0\BasicAuthentication.dll
+C:\Users\DELL\source\repos\MCC81NET\BasicAuthentication\obj\Debug\net6.0\refint\BasicAuthentication.dll
+C:\Users\DELL\source\repos\MCC81NET\BasicAuthentication\obj\Debug\net6.0\BasicAuthentication.pdb
+C:\Users\DELL\source\repos\MCC81NET\BasicAuthentication\obj\Debug\net6.0\BasicAuthentication.genruntimeconfig.cache
+C:\Users\DELL\source\repos\MCC81NET\BasicAuthentication\obj\Debug\net6.0\ref\BasicAuthentication.dll

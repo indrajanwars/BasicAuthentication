@@ -8,8 +8,4 @@
     <StartupObject>BasicAuthentication.Program</StartupObject>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Authentication\" />
-  </ItemGroup>
-
 </Project>

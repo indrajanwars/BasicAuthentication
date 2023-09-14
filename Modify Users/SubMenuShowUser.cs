@@ -10,15 +10,15 @@
             Console.WriteLine("3. Back");
 
             Console.Write("Pilih menu: ");
-            string submenuChoice = Console.ReadLine();
+            string submenuPilih = Console.ReadLine();
 
-            switch (submenuChoice)
+            switch (submenuPilih)
             {
                 case "1":
-                    SubMenuShowUser.EditUser(daftarUser);
+                    EditUser(daftarUser);
                     break;
                 case "2":
-                    SubMenuShowUser.DeleteUser(daftarUser);
+                    DeleteUser(daftarUser);
                     break;
                 case "3":
                     break;
@@ -30,9 +30,8 @@
 
         public static void EditUser(List<User> daftarUser)
         {
-            Console.Clear();
             Console.WriteLine("== EDIT USER ==");
-            Console.Write("Masukkan ID pengguna yang ingin diedit: ");
+            Console.Write("Masukkan ID user yang ingin diedit: ");
             if (int.TryParse(Console.ReadLine(), out int userId) && userId >= 1 && userId <= daftarUser.Count)
             {
                 // Mendapatkan pengguna berdasarkan ID.
@@ -50,35 +49,35 @@
                 userToEdit.LastName = newLastName;
                 userToEdit.Password = newPassword;
 
-                Console.WriteLine("Data pengguna berhasil diubah.");
+                Console.WriteLine("Data user berhasil diubah.");
             }
             else
             {
-                Console.WriteLine("ID pengguna tidak valid.");
+                Console.WriteLine("ID user tidak valid.");
             }
 
             Console.ReadLine();
+            Program.ShowUser();
         }
 
 
         public static void DeleteUser(List<User> daftarUser)
         {
-            Console.Clear();
             Console.WriteLine("== DELETE USER ==");
-            Console.Write("Masukkan ID pengguna yang ingin dihapus: ");
+            Console.Write("Masukkan ID user yang ingin dihapus: ");
             if (int.TryParse(Console.ReadLine(), out int userId) && userId >= 1 && userId <= daftarUser.Count)
             {
                 // Mendapatkan pengguna berdasarkan ID.
                 User userToDelete = daftarUser[userId - 1];
 
                 // Konfirmasi penghapusan.
-                Console.Write($"Apakah Anda yakin ingin menghapus pengguna {userToDelete.FirstName} {userToDelete.LastName}? (Y/N): ");
+                Console.Write($"Apakah Anda yakin ingin menghapus user {userToDelete.FirstName} {userToDelete.LastName}? (Y/N): ");
                 string confirmation = Console.ReadLine();
 
                 if (confirmation.Equals("Y", StringComparison.OrdinalIgnoreCase))
                 {
                     daftarUser.Remove(userToDelete);
-                    Console.WriteLine("Data pengguna berhasil dihapus.");
+                    Console.WriteLine("Data user berhasil dihapus.");
                 }
                 else
                 {
@@ -87,10 +86,11 @@
             }
             else
             {
-                Console.WriteLine("ID pengguna tidak valid.");
+                Console.WriteLine("ID user tidak valid.");
             }
 
             Console.ReadLine();
+            Program.ShowUser();
         }
     }
 

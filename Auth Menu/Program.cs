@@ -10,7 +10,6 @@ namespace BasicAuthentication
         public string Password { get; set; }
     }
 
-
     public class Program
     {
         static List<User> daftarUser = new();
@@ -58,7 +57,6 @@ namespace BasicAuthentication
         }
 
 
-
         // MENU 1. Create User
         public static void CreateUser()
         {
@@ -68,8 +66,23 @@ namespace BasicAuthentication
             string firstName = Console.ReadLine();
             Console.Write("Create Last Name: ");
             string lastName = Console.ReadLine();
-            Console.Write("Create Password: ");
-            string password = Console.ReadLine();
+            string password;
+
+            do
+            {
+                Console.Write("Create Password: ");
+                password = Console.ReadLine();
+
+                if (IsPasswordValid(password))
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Password harus memiliki minimal 8 karakter, minimal 1 huruf Kapital, minimal 1 huruf kecil dan minimal 1 angka.");
+                }
+            }
+            while (true);
 
             if (firstName.Length >= 2 && lastName.Length >= 2)
             {
@@ -94,18 +107,49 @@ namespace BasicAuthentication
             Console.ReadLine();
         }
 
+        // Metode untuk memeriksa apakah password memenuhi syarat
+        private static bool IsPasswordValid(string password)
+        {
+            // Memeriksa panjang password dan karakter-karakternya
+            if (password.Length < 8)
+            {
+                return false;
+            }
+
+            // Memeriksa apakah terdapat setidaknya satu huruf kapital
+            if (!password.Any(char.IsUpper))
+            {
+                return false;
+            }
+
+            // Memeriksa apakah terdapat setidaknya satu huruf kecil
+            if (!password.Any(char.IsLower))
+            {
+                return false;
+            }
+
+            // Memeriksa apakah terdapat setidaknya satu angka
+            if (!password.Any(char.IsDigit))
+            {
+                return false;
+            }
+
+            return true;
+        }
 
 
         // MENU 2. Show User
         public static void ShowUser()
         {
             Console.Clear();
-            Console.WriteLine("==SHOW USER==");
+            Console.WriteLine("== SHOW USER ==");
             Console.WriteLine("========================");
 
             if (daftarUser.Count == 0)
             {
                 Console.WriteLine("Tidak ada data yang tersedia. Silahkan membuat user baru.");
+                Console.WriteLine();
+                Console.WriteLine("Tekan Enter untuk kembali.");
             }
 
             else
@@ -128,7 +172,6 @@ namespace BasicAuthentication
             }
             Console.ReadLine();
         }
-
 
 
         // MENU 3. Search User
